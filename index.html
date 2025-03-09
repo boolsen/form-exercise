@@ -8,19 +8,50 @@
 </head>
 <body>
     <div class="container row">
-        <div class="left">
-            <div class="logo-banner">
+        <div class="left column">
+            <div class="logo-banner row">
                 <img class="logo" src="odin-logo-lined.png" alt="Odin logo">
+                <p class="logo-text">Odin</p>
             </div>
-            <p class="img-source"></p>
+            <div class="img-source-container column">
+                <p class="img-source">Photo by Hailie West on Unsplash</p>
+            </div>
         </div>
-        <div class="right">
-            <form action="#" method="post">
-                <div class="top grey"></div>
-                <div class="middle"></div>
-                <div class="bottom grey"></div>
-            </form>
-        </div>
+        <form action="#" method="post">
+            <div class="right column">          
+                <div class="top grey">
+                    <strong>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.</strong>
+                    <strong>Sign up <em>now</em> to get started.</strong>
+                    <br>
+                    <strong>You <em>know</em> you want to.</strong>
+                </div>
+                <div class="middle">
+                    <h2>Let's do this!</h2>
+                    <div class="input-container row">
+                        <div class="left-inputs inputs">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" name="first-name" id="first-name">
+                            <label for="e-mail">E-MAIL</label>
+                            <input type="email" name="e-mail" id="e-mail">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password">                            
+                        </div>
+                        <div class="right-inputs inputs">
+                            <label for="last-name">SECOND NAME</label>
+                            <input type="text" name="last-name" id="last-name">
+                            <label for="phone-number">PHONE NUMBER</label>
+                            <input type="tel" name="phone-number" id="phone-number">
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirm-password" id="confirm-password">
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom column grey">
+                    <button class="submit-btn" type="submit">Create account</button>
+                    <p>Already have an account <a href="#">Log in</a></p>
+                </div>            
+            </div>
+        </form>
     </div>
     
     <script src="javascript.js"></script>

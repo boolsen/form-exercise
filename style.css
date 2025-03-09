@@ -9,13 +9,34 @@
   }
 
 :root {
-    font-family: odin, sans-serif;
-    --golden-ratio: 0.618;
+    font-family: Arial, Helvetica, sans-serif;
+    --golden-ratio: 1.618;
+}
+
+html{
+    background-color: rgb(26, 25, 25);
 }
 
 body {
+    box-sizing: border-box;
     width: 100svw;
     height: 100svh;
+    padding: 0 13svw;
+}
+
+a {
+    text-decoration: none;
+    :link{
+        color: rgb(119, 146, 106);
+    }
+}
+
+a:link{
+    color: rgb(119, 146, 106);
+}
+
+a:visited{
+    color: rgb(92, 114, 82);
 }
 
 .column {
@@ -34,18 +55,110 @@ body {
 }
 
 .left {
-    background-image: url("plants-bg.avif");
-    width: calc(100svh * calc(1 - var(--golden-ratio)));
+    background: url(plants-bg.avif);
+    background-size: cover;
+    width: calc(100% / calc(1 + var(--golden-ratio)));
+    padding-top: 15%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 60svh;
 }
 
 .right {
-    width: calc(100svh * var(--golden-ratio));
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.right > * {
+    flex-grow: 1;
+    padding: 2rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 1rem;
 }
 
 .logo-banner {
-    background: rgb(17, 14, 14,0.2);
+    background: rgb(17, 14, 14,50%);
+    height: 170px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: content-box;
 }
 
 .logo {
-    opacity: 1;
+    height: 70%;    
+}
+
+.logo-text {
+    font-family: odin;
+    color: white;
+    font-size: 6rem;
+}
+
+.img-source-container {
+    justify-content: flex-end;
+}
+
+.img-source {
+    color:white;
+}
+
+label {
+    display: block;
+}
+
+.top {
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 40px;
+    font-size: 1.5em;
+    
+}
+
+.middle {
+    gap: 30px;
+    align-items: flex-start;
+    box-shadow: 0px 0.3rem 0.5rem rgb(190, 190, 190);
+    z-index: 2;
+    flex-grow: 0;
+}
+
+.bottom {
+    z-index: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.grey {
+    background: rgb(248, 248, 248);
+}
+
+.input-container {
+    gap: 50px;
+}
+
+input {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.submit-btn{
+    padding: 1rem 3rem;
+    background-color: rgb(119, 146, 106);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
 }
